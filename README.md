@@ -28,3 +28,10 @@
 
 3. 补充触发模式节点：
 运行pub_image_dual_trigger.cpp即可
+
+4. 补充信息
+此外，发现官方提供了更多细节信息，包括完整的安装过程、各种注意事项、代码接口细节等，值得仔细去看：
+/opt/MVS/doc/Machine Vision Camera SDK (C)_Developer Guide_V3.2.0_CH
+
+其中“环境配置”中就包含了一个重要补充信息：“使用USB相机建议设置usb缓存（set_usbfs_memory_size.sh）。set_usbfs_memory_size.sh：设置usb缓存，使之能兼容多个大分辨率u3相机。”
+另外里面还有“相机参数节点表”，列出了所有相机参数细节。
