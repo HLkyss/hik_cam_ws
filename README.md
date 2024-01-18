@@ -9,3 +9,22 @@
 <img src="https://github.com/HLkyss/hik_cam_ws/assets/69629475/5f6d9867-6989-44ee-9f28-5548dde11943" width="800"> <br />
 
 同步触发板链接：嘉立创
+
+
+***
+经过比对网上开源的ros版本的海康相机代码，大致了解了工作流程：
+
+1. 根据官方sdk代码修改：/opt/MVS/Samples/64，此路径包含所有官方代码。并且包含一个readme说明了每个示例代码的主要功能。
+主要用到：
+ - GrabImage：主动方式抓取图像
+ - ImageProcess：图像处理(存图和像素格式转换)
+
+对比了pub_image_right.cpp和GrabImage.cpp，并将对比过程中的细节记录在了代码里。
+
+2. 根据上述经验，理解了开源代码怎样将官方代码应用到ros中。于是自己写针对多相机的代码pub_image_dual.cpp，主要参考：
+ - GrabMultipleCamera：多相机取流
+
+运行pub_image_dual2.cpp即可。
+
+3. 补充触发模式节点：
+运行pub_image_dual_trigger.cpp即可
