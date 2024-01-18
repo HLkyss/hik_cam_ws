@@ -9,7 +9,8 @@
 <img src="https://github.com/HLkyss/hik_cam_ws/assets/69629475/5f6d9867-6989-44ee-9f28-5548dde11943" width="800"> <br />
 
 同步触发板及程序链接：嘉立创
-
+<img src="https://github.com/HLkyss/hik_cam_ws/assets/69629475/93b6f06d-d0b2-48b0-94ea-e6397a290e14" width="800"> <br />
+<img src="https://github.com/HLkyss/hik_cam_ws/assets/69629475/766b62fc-2a1e-4f9d-943e-4582d2dbfb9d" width="800"> <br />
 
 ***
 经过比对网上开源的ros版本的海康相机代码，大致了解了工作流程：
