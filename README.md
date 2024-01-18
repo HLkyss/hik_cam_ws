@@ -8,7 +8,7 @@
 <img src="https://github.com/HLkyss/hik_cam_ws/assets/69629475/d697a3c0-6625-461c-9fc0-83759731b98c" width="800"> <br />
 <img src="https://github.com/HLkyss/hik_cam_ws/assets/69629475/5f6d9867-6989-44ee-9f28-5548dde11943" width="800"> <br />
 
-同步触发板链接：嘉立创
+同步触发板及程序链接：嘉立创
 
 
 ***
@@ -35,3 +35,12 @@
 
 其中“环境配置”中就包含了一个重要补充信息：“使用USB相机建议设置usb缓存（set_usbfs_memory_size.sh）。set_usbfs_memory_size.sh：设置usb缓存，使之能兼容多个大分辨率u3相机。”
 另外里面还有“相机参数节点表”，列出了所有相机参数细节。
+
+遇到的问题：最开始怎么改代码都会遇到相机画面卡顿或撕裂的问题，用官方软件也有类似问题，困扰了很久。后面证实是由于USB带宽不稳定造成的，使用的相机为USB3.0相机，在USB3.2接口的电脑上会出现过低或不均的情况：<br />
+<img src="https://github.com/HLkyss/hik_cam_ws/assets/69629475/951e0632-4525-41e7-81c0-e1b914139026" width="800"> <br />
+<img src="https://github.com/HLkyss/hik_cam_ws/assets/69629475/eb4618bf-b3e3-4927-b72c-2648b80a0a3a" width="800"> <br />
+<img src="https://github.com/HLkyss/hik_cam_ws/assets/69629475/4d60f0bd-9516-4345-95ce-aef428d08b7a" width="800"> <br />
+
+
+
+
