@@ -79,6 +79,14 @@ void CaptureAndPublish(image_transport::Publisher& pub, MV_CC_DEVICE_INFO* devic
         return;
     }
 
+    nRet = MV_CC_SetEnumValue(handle, "ExposureAuto", 0);//要专门关闭自动曝光，不然后面设置手动曝光参数可能报错
+    if(MV_OK != nRet){
+        printf("MV_CC_SetEnumValue ExposureAuto fail! nRet [%x]\n", nRet);
+        return;
+    }
+    else
+        printf("MV_CC_SetEnumValue ExposureAuto success\n");
+
     // @TODO:设置参数，具体看手册《Machine Vision Camera SDK (C)_Developer Guide_V3.2.0_CH》
     nRet = MV_CC_SetFloatValue(handle, "ExposureTime", 10000);
     if(MV_OK != nRet){
