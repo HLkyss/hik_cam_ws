@@ -2,7 +2,15 @@
 海康相机采集图像ros节点<br />
 包含普通模式和外部触发模式采集
 
-参考：https://github.com/jike5/HikRobot-Camera-ROS<br />
+编译：<br />
+cd /home/vio/Code/hik_vio_ws/src/HikRobot-Camera-ROS-main/src/driver/camera <br />
+mkdir build && cd build <br />
+cmake .. <br />
+make <br />
+<br />
+cd /home/vio/Code/hik_vio_ws <br />
+catkin_make <br />
+
 
 <img src="https://github.com/HLkyss/hik_cam_ws/assets/69629475/74271f8e-a11e-41b3-8a2d-47b9e59cc652" width="800"> <br />
 <img src="https://github.com/HLkyss/hik_cam_ws/assets/69629475/d697a3c0-6625-461c-9fc0-83759731b98c" width="800"> <br />
@@ -48,7 +56,13 @@
 <img src="https://github.com/HLkyss/hik_cam_ws/assets/69629475/eb4618bf-b3e3-4927-b72c-2648b80a0a3a" width="800"> <br />
 <img src="https://github.com/HLkyss/hik_cam_ws/assets/69629475/4d60f0bd-9516-4345-95ce-aef428d08b7a" width="800"> <br />
 
-5. 内存泄漏问题
-新程序解决内存泄漏问题pub_image_dual_trigger2.cpp
-
+5. 内存泄漏问题 <br />
+解决了占用内存过大的问题，并移植到工控机上。<br />
+之前应该是，每次都会重新申请指针指向新的地址存数据，这一版改用类，每个相机类只申请一次内存，以后都在同一个地址存新数据。尝试free掉，失败。<br />
+新程序解决内存泄漏问题pub_image_dual_trigger2.cpp <br />
+<br />
+问题： <br />
+工控机上有个问题：有一个文件/home/hl/project/camera/hik_cam_ros/hik_4_ws/src/HikRobot-Camera-ROS-main/src/driver/camera/inc/HIK_camera.h <br />
+先编译camera库时，保持MV_CC_PIXEL_CONVERT_PARAM stConvertParam_ = {0};不变。再编译整个ros工作空间时会报错，要修改为：MV_CC_PIXEL_CONVERT_PARAM_EX stConvertParam_ = {0}; <br />
+经过多次测试，这个问题在我的机子上没出现过，可能是安装的mvs相关库的版本不一样。 <br />
 
