@@ -1,7 +1,0 @@
-<launch>
-     <!--<rosparam file="$(find mvs_image_ros)/config/camera.yaml" command="load" />-->
-    <node pkg="mvs_image_ros" type="pub_image_left" name="pub_image_left" respawn="true" output="screen" />
-    <node pkg="mvs_image_ros" type="pub_image_right" name="pub_image_right" respawn="true" output="screen" />
-    <node pkg="rviz" type="rviz" name="rviz" args="-d $(find mvs_image_ros)/config/hik_dual.rviz" />
-
-</launch>
