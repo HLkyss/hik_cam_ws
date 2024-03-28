@@ -44,8 +44,7 @@ catkin_make <br />
 3. 补充触发模式节点：
 运行pub_image_dual_trigger.cpp即可
 
-4. 补充信息
-此外，发现官方提供了更多细节信息，包括完整的安装过程、各种注意事项、代码接口细节等，值得仔细去看：
+官方提供了更多细节信息，包括完整的安装过程、各种注意事项、代码接口细节等，值得仔细去看：
 /opt/MVS/doc/Machine Vision Camera SDK (C)_Developer Guide_V3.2.0_CH
 
 其中“环境配置”中就包含了一个重要补充信息：“使用USB相机建议设置usb缓存（set_usbfs_memory_size.sh）。set_usbfs_memory_size.sh：设置usb缓存，使之能兼容多个大分辨率u3相机。”
@@ -56,7 +55,7 @@ catkin_make <br />
 <img src="https://github.com/HLkyss/hik_cam_ws/assets/69629475/eb4618bf-b3e3-4927-b72c-2648b80a0a3a" width="800"> <br />
 <img src="https://github.com/HLkyss/hik_cam_ws/assets/69629475/4d60f0bd-9516-4345-95ce-aef428d08b7a" width="800"> <br />
 
-5. 内存泄漏问题 <br />
+4. 内存泄漏问题 <br />
 解决了占用内存过大的问题，并移植到工控机上。<br />
 之前应该是，每次都会重新申请指针指向新的地址存数据，这一版改用类，每个相机类只申请一次内存，以后都在同一个地址存新数据。尝试free掉，失败。<br />
 新程序解决内存泄漏问题pub_image_dual_trigger2.cpp <br />
