@@ -48,6 +48,7 @@
 <img src="https://github.com/HLkyss/hik_cam_ws/assets/69629475/eb4618bf-b3e3-4927-b72c-2648b80a0a3a" width="800"> <br />
 <img src="https://github.com/HLkyss/hik_cam_ws/assets/69629475/4d60f0bd-9516-4345-95ce-aef428d08b7a" width="800"> <br />
 
-
+5. 内存泄漏问题
+新程序解决内存泄漏问题pub_image_dual_trigger2.cpp
 
 
