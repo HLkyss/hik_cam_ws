@@ -13,7 +13,8 @@
 <img src="https://github.com/HLkyss/hik_cam_ws/assets/69629475/766b62fc-2a1e-4f9d-943e-4582d2dbfb9d" width="400"> <br />
 
 采集平台搭建：<br />
-<img src="https://github.com/HLkyss/hik_cam_ws/assets/69629475/434f4165-0ada-4fcc-9a75-b276af121632" width="400"> <br />
+<img src="https://github.com/HLkyss/hik_cam_ws/assets/69629475/434f4165-0ada-4fcc-9a75-b276af121632" width="800"> <br />
+<img src="https://github.com/HLkyss/hik_cam_ws/assets/69629475/f63d46a1-44de-412b-b02d-58fa556800f7" width="800"> <br />
 
 
 ***
